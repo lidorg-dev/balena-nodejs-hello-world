@@ -29,8 +29,8 @@ jobs:
           node-version: 16
           registry-url: https://npm.pkg.github.com
           always-auth: true
-          token: "${{ github.token }}"
+          token: "${{ GITHUB_TOKEN }}"
       - run: npm ci
-      - run: npm publish
+      - run: npm publish --registry https://npm.pkg.github.com
         env:
-          NODE_AUTH_TOKEN: ${{ github.token }}
+          NODE_AUTH_TOKEN: ${{ GITHUB_TOKEN }}

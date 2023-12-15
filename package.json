@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lidorg-dev/balena-nodejs-hello-world/simple-server-node.git"
+    "url": "git+https://github.com/lidorg-dev/balena-nodejs-hello-world.git"
   },
   "keywords": [
     "webserver",

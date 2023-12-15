@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "description": "A simple Expressjs Web server on balena",
   "main": "server.js",
-  "private": true,
+  "private": false,
   "scripts": {
     "test" : "echo \"Error: no test specified\"",
     "start": "node src/server.js"

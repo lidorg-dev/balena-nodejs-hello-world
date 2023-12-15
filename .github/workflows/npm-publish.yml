@@ -31,6 +31,8 @@ jobs:
           always-auth: true
           token: "${{ secrets.NPM_TOKEN }}"
       - run: npm ci
+      - name: Authenticate with private NPM package
+        run: echo "//npm.pkg.github.com/lidorg-dev/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
       - run: "npm publish --access public --registry https://npm.pkg.github.com/lidorg-dev"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

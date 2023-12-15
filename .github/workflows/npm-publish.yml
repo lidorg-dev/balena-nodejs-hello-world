@@ -33,6 +33,8 @@ jobs:
       - run: npm ci
       - name: Authenticate with private NPM package
         run: echo "//npm.pkg.github.com/lidorg-dev/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+      - run: npm set "//npm.pkg.github.com/lidorg-dev/:_authToken=${{ secrets.NPM_TOKEN }}"
+      - run: npm login 
       - run: npm whoami
       - run: npm publish --access public --registry https://npm.pkg.github.com/lidorg-dev
         env:
